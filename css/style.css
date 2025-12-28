@@ -2,23 +2,19 @@
    POLICES
 ====================================================== */
 
-/* Raleway (contenu) */
 @font-face {
     font-family: 'Raleway';
     src: url('../fonts/Raleway-Regular.ttf') format('truetype');
     font-weight: normal;
-    font-style: normal;
 }
 @font-face {
     font-family: 'Raleway';
     src: url('../fonts/Raleway-Bold.ttf') format('truetype');
     font-weight: bold;
-    font-style: normal;
 }
 @font-face {
     font-family: 'Raleway';
     src: url('../fonts/Raleway-Italic.ttf') format('truetype');
-    font-weight: normal;
     font-style: italic;
 }
 
@@ -39,7 +35,7 @@ body {
 }
 
 /* ======================================================
-   CONTENEUR GLOBAL (centrage comme la maquette)
+   CONTENEUR CENTRAL
 ====================================================== */
 
 header,
@@ -56,7 +52,6 @@ footer {
 header {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     gap: 40px;
     background-color: #2f80ed;
     color: white;
@@ -69,7 +64,6 @@ header {
     border-radius: 50%;
     border: 4px solid white;
     object-fit: cover;
-    cursor: zoom-in;
     transition: transform 0.3s ease;
 }
 
@@ -78,9 +72,8 @@ header {
 }
 
 .header-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex: 1;
+    text-align: center;
 }
 
 .header-right h1 {
@@ -96,20 +89,27 @@ header {
     margin-bottom: 15px;
 }
 
-.header-right ul {
-    list-style: none;
+/* Infos header */
+.header-infos {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    gap: 12px 40px;
 }
 
-.header-right li {
-    margin-bottom: 5px;
+.header-infos div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
 }
 
-.header-right a {
+.header-infos a {
     color: white;
     text-decoration: none;
 }
 
-.header-right a:hover {
+.header-infos a:hover {
     text-decoration: underline;
 }
 
@@ -136,7 +136,7 @@ aside {
 }
 
 /* ======================================================
-   TITRES & ESPACEMENTS
+   TITRES
 ====================================================== */
 
 h3 {
@@ -159,8 +159,11 @@ aside h3 {
 h4 {
     font-family: 'Lato', sans-serif;
     font-size: 1.1rem;
-    margin-bottom: 5px;
 }
+
+/* ======================================================
+   ESPACEMENTS
+====================================================== */
 
 aside section,
 .content section {
@@ -175,13 +178,13 @@ p {
    PROFIL
 ====================================================== */
 
-.content #profil p {
+#profil p {
     text-align: justify;
     text-indent: 30px;
 }
 
 /* ======================================================
-   LISTES GÉNÉRALES
+   LISTES
 ====================================================== */
 
 ul {
@@ -193,20 +196,17 @@ li {
 }
 
 /* ======================================================
-   COMPÉTENCES (ÉTOILES)
+   COMPÉTENCES
 ====================================================== */
 
 .skills li {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
 }
 
 .stars {
     color: #2f80ed;
     letter-spacing: 2px;
-    font-size: 1rem;
 }
 
 /* ======================================================
@@ -223,7 +223,7 @@ li {
 }
 
 /* ======================================================
-   QUALITÉS / CENTRES D’INTÉRÊT
+   QUALITÉS & INTÉRÊTS
 ====================================================== */
 
 aside section ul:not(.skills):not(.languages) li {
@@ -234,20 +234,21 @@ aside section ul:not(.skills):not(.languages) li {
 aside section ul:not(.skills):not(.languages) li::before {
     content: "■";
     color: #2f80ed;
-    margin-right: 10px;
     font-size: 0.7rem;
+    margin-right: 10px;
 }
 
 /* ======================================================
-   ARTICLES (FORMATIONS / EXPÉRIENCES)
+   ARTICLES
 ====================================================== */
 
 .content article {
-    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 5px 20px;
     padding: 15px 15px 15px 20px;
     margin-bottom: 20px;
     border-left: 4px solid transparent;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .content article:hover {
@@ -255,36 +256,38 @@ aside section ul:not(.skills):not(.languages) li::before {
     border-left-color: #2f80ed;
 }
 
-.content article span {
-    position: absolute;
-    right: 0;
-    top: 0;
-    color: #2f80ed;
+.content article p {
+    font-style: italic;
     font-size: 0.9rem;
 }
 
+.content article span {
+    color: #2f80ed;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
 /* ======================================================
-   FOOTER
+   FOOTER (MAQUETTE EXACTE)
 ====================================================== */
 
 footer {
     background-color: #2f80ed;
     color: white;
+    padding: 16px 0;
     text-align: center;
-    padding: 25px;
 }
 
 footer ul {
     display: flex;
     justify-content: center;
     gap: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 }
 
 footer a {
     color: white;
     text-decoration: none;
-    transition: opacity 0.3s ease;
 }
 
 footer a:hover {

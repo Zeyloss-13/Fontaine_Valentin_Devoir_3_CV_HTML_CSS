@@ -7,12 +7,10 @@
     <!-- Google Font : Lato (titres) -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome (icônes réseaux sociaux) -->
+    <!-- Font Awesome (icônes) -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-          crossorigin="anonymous"
-          referrerpolicy="no-referrer">
+          crossorigin="anonymous">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -31,17 +29,27 @@
         <h1>Valentin Fontaine</h1>
         <h2>Développeur Web et Web Mobile</h2>
 
-        <ul>
-            <li><a href="mailto:v.fontaine94@outlook.fr">v.fontaine94@outlook.fr</a></li>
-            <li><a href="tel:+33783719895">07 83 71 98 95</a></li>
-            <li>
-                <a href="https://www.google.com/maps?q=49+rue+Marguerite+Hemart+Ferandier+80000+Amiens"
-                   target="_blank">
-                    49 rue Marguerite Hemart, 80000 Amiens
+        <!-- Infos header avec icônes (comme la maquette) -->
+        <div class="header-infos">
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:mail@gmail.com">mail@gmail.com</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+33700000000">07 00 00 00 00</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-house"></i>
+                <a href="https://maps.app.goo.gl/okVDBgZ9jTcrVcV56" target="_blank">
+                    adresse
                 </a>
-            </li>
-            <li>Permis B</li>
-        </ul>
+            </div>
+            <div>
+                <i class="fa-solid fa-car"></i>
+                Permis B
+            </div>
+        </div>
     </div>
 </header>
 
@@ -55,22 +63,10 @@
         <section>
             <h3>Compétences</h3>
             <ul class="skills">
-                <li>
-                    <span>HTML</span>
-                    <span class="stars">★★★★★</span>
-                </li>
-                <li>
-                    <span>CSS</span>
-                    <span class="stars">★★★★☆</span>
-                </li>
-                <li>
-                    <span>JavaScript</span>
-                    <span class="stars">★★★☆☆</span>
-                </li>
-                <li>
-                    <span>PHP</span>
-                    <span class="stars">★★☆☆☆</span>
-                </li>
+                <li><span>HTML</span><span class="stars">★★★★★</span></li>
+                <li><span>CSS</span><span class="stars">★★★★☆</span></li>
+                <li><span>JavaScript</span><span class="stars">★★★☆☆</span></li>
+                <li><span>PHP</span><span class="stars">★★☆☆☆</span></li>
             </ul>
         </section>
 
@@ -78,18 +74,8 @@
         <section>
             <h3>Langues</h3>
             <ul class="languages">
-                <li>
-                    <span>Français</span>
-                    <span>Langue maternelle</span>
-                </li>
-                <li>
-                    <span>Anglais</span>
-                    <span>Professionnel</span>
-                </li>
-                <li>
-                    <span>Allemand</span>
-                    <span>Notions</span>
-                </li>
+                <li><span>Français</span><span>Langue maternelle</span></li>
+                <li><span>Anglais</span><span>Basique</span></li>
             </ul>
         </section>
 
@@ -165,6 +151,17 @@
             </article>
         </section>
 
+        <!-- Stages -->
+        <section>
+            <h3>Stages</h3>
+
+            <article>
+                <h4>Vendeur stagiaire</h4>
+                <p>Deguiz Folie / Dynamite Game – Amiens</p>
+                <span>Novembre 2018 – Janvier 2019</span>
+            </article>
+        </section>
+
         <!-- Expériences professionnelles -->
         <section>
             <h3>Expériences professionnelles</h3>
@@ -200,12 +197,6 @@
             </article>
 
             <article>
-                <h4>Vendeur stagiaire</h4>
-                <p>Deguiz Folie / Dynamite Game – Amiens</p>
-                <span>Novembre 2018 – Janvier 2019</span>
-            </article>
-
-            <article>
                 <h4>Employé polyvalent / Serveur barman</h4>
                 <p>France, Luxembourg, Belgique</p>
                 <span>2015 – 2017</span>
@@ -213,7 +204,6 @@
         </section>
 
     </section>
-
 </main>
 
 <!-- ================= FOOTER ================= -->
